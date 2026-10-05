@@ -1,197 +1,550 @@
-Wireshark Network Analysis Project
+# Wireshark Network Analysis
 
-A cybersecurity project demonstrating network packet capture and traffic analysis using Wireshark, covering protocol analysis, display filtering, network troubleshooting, and basic security observations.
+A cybersecurity project demonstrating **live packet capture, network traffic analysis, protocol inspection, security monitoring, and basic network troubleshooting using Wireshark** in a controlled environment.
 
-Introduction
+## 📌 Project Overview
 
-Wireshark is a widely used network protocol analyzer that enables detailed inspection of network traffic. It supports both live packet capture and offline packet analysis, helping security professionals and network administrators understand network communications, troubleshoot connectivity issues, and investigate suspicious activity.
+Wireshark is a widely used open-source network protocol analyzer that allows security professionals and network administrators to capture and inspect network traffic.
 
-Problem Statement
+This project demonstrates practical packet analysis techniques using Wireshark to understand network communication, identify protocols, analyze packets, investigate suspicious traffic patterns, and troubleshoot network issues.
 
-Organizations often face challenges such as:
+## 🎯 Problem Statement
 
-Difficulty identifying abnormal or potentially malicious network activity
-Limited visibility into internal network traffic
-Difficulty diagnosing connectivity problems and packet loss
-Lack of detailed information during security incidents
-Objectives
-Understand network packet capture
-Analyze network traffic using Wireshark
-Identify source and destination IP addresses
-Analyze TCP, UDP, DNS, HTTP, ARP, and ICMP traffic
-Use Wireshark display filters
-Identify unusual or suspicious traffic patterns
-Understand how Wireshark supports network troubleshooting and security monitoring
-Tools Used
-Wireshark
-Windows / Ubuntu / Kali Linux
-Active network connection
-Computer/laptop with a network adapter
-Wireshark Filters Used
-ip      # IPv4 traffic
-tcp     # TCP packets
-udp     # UDP packets
-dns     # DNS queries/responses
-http    # HTTP packets
-icmp    # ICMP (ping) packets
-arp     # ARP requests/replies
-Project Implementation
-1. Install Wireshark
+Network traffic can contain valuable information about system communication, network performance, and potential security issues.
 
-Downloaded and installed Wireshark from the official website.
+Security professionals need the ability to:
 
-2. Identify the Network Interface
+* Capture network packets
+* Identify communicating systems
+* Analyze network protocols
+* Understand TCP/IP communication
+* Investigate unusual traffic
+* Detect suspicious communication patterns
+* Troubleshoot connectivity problems
+* Support security monitoring and incident investigation
 
-Selected the active Wi-Fi or Ethernet interface.
+Wireshark provides visibility into network traffic at the packet level.
 
-3. Start Packet Capture
+## 🎯 Objectives
 
-Started live packet capture on the selected network interface.
+The main objectives of this project are:
 
-4. Generate Network Traffic
+* Capture live network traffic using Wireshark
+* Analyze captured packets
+* Identify source and destination IP addresses
+* Understand TCP and UDP communication
+* Analyze DNS, HTTP, ARP, and ICMP traffic
+* Use Wireshark display filters
+* Inspect TCP flags and packet information
+* Identify unusual or unexpected traffic patterns
+* Troubleshoot network communication issues
+* Save packet captures for further analysis
 
-Generated normal network traffic by browsing websites, performing searches, and running commands such as:
+## 🛠️ Tools and Technologies
 
-ping google.com
-5. Stop Packet Capture
+| Category          | Technology                     |
+| ----------------- | ------------------------------ |
+| Packet Analyzer   | Wireshark                      |
+| Operating System  | Windows / Ubuntu / Kali Linux  |
+| Network Protocols | TCP, UDP, DNS, HTTP, ARP, ICMP |
+| Capture Format    | `.pcapng`                      |
+| Command Line      | Linux Terminal                 |
+| Network Tool      | Ping                           |
 
-Stopped the capture after collecting sufficient network packets.
+## 🧪 Environment
 
-6. Apply Display Filters
+The project was performed in a controlled environment using:
 
-Applied protocol-specific filters to isolate:
+* A computer/laptop
+* Active network connection
+* Wireshark
+* Network adapter
+* Optional Linux/Kali environment for additional testing
 
-IP
-TCP
-UDP
-DNS
-HTTP
-ICMP
-ARP
-7. Analyze Packets
+All traffic analysis should be performed only on networks and systems that are owned by you or where you have explicit authorization.
 
-Examined:
+---
 
-Source and destination IP addresses
-Source and destination ports
-TCP flags
-Packet details
-Sequence numbers
-DNS queries and responses
-ICMP requests and replies
-8. Save the Capture
+## 🔍 Project Methodology
 
-Saved packet captures in .pcapng format for analysis and documentation.
+The project followed these steps:
 
-Security Analysis
+1. Install and configure Wireshark
+2. Identify the active network interface
+3. Start packet capture
+4. Generate normal network traffic
+5. Capture packets
+6. Stop the capture
+7. Apply Wireshark display filters
+8. Analyze source and destination addresses
+9. Analyze protocols and ports
+10. Inspect TCP communication
+11. Analyze DNS, ARP, ICMP, and HTTP traffic
+12. Investigate unusual traffic patterns
+13. Save the packet capture as a `.pcapng` file
+14. Document observations and results
 
-The captured traffic was examined for security-relevant observations, including:
+---
 
-Unexpected protocols or connections
-Repeated connection attempts
-Plaintext or insecure communication
-Unusual communication patterns
-Potential indicators requiring further investigation
+# 💻 Wireshark Commands & Related Commands
 
-A suspicious traffic pattern is treated as an observation that requires additional investigation and is not automatically considered proof of an attack.
+Wireshark is primarily a graphical packet analyzer, but several command-line utilities can be used with it.
 
-Network Troubleshooting
+## 1. Check Wireshark Version
 
-Wireshark was also used to understand common network troubleshooting scenarios, including:
+```bash
+wireshark --version
+```
 
-Packet loss
-Connection failures
-TCP retransmissions
-DNS-related issues
-Network communication problems
-Simulated DHCP misconfiguration scenarios
-Screenshots
-Figure	Description
-1	Wireshark download page
-2	Wireshark launched showing available interfaces
-3	Selecting the active network interface
-4	Live packet capture in progress
-5	Stopping the packet capture
-6	IP filter applied
-7	TCP filter applied
-8	UDP filter applied
-9	DNS filter applied
-10	HTTP filter applied
-11	ICMP filter applied
-12	ARP filter applied
-13	Examining source and destination IP addresses
-14	TCP packet analysis
-15	UDP packet analysis
-16	DNS traffic analysis
-17	ICMP / ping analysis — capture 1
-18	ICMP / ping analysis — capture 2
-Project Screenshots
+## 2. Start Wireshark
 
-Figure 1
-Figure 2
-Figure 3
-Figure 4
-Figure 5
-Figure 6
-Figure 7
-Figure 8
-Figure 9
-Figure 10
-Figure 11
-Figure 12
-Figure 13
-Figure 14
-Figure 15
-Figure 16
-Figure 17
-Figure 18
+```bash
+wireshark
+```
 
-Project Outcomes
-Developed a better understanding of network traffic
-Learned how to capture and inspect network packets
-Gained practical experience with Wireshark display filters
-Analyzed common network protocols
-Improved network troubleshooting skills
-Developed basic security monitoring and traffic-analysis skills
-Advantages
-Free and open-source
-Powerful real-time packet capture and inspection
-Supports a wide range of network protocols
-Useful for troubleshooting and security analysis
-Helpful for cybersecurity and networking education
-Limitations
-Large packet captures can contain a very high volume of data
-Packet-level information can be difficult for beginners to interpret
-Encryption can limit visibility into application-level content
-Packet analysis requires understanding of networking protocols
-Applications / Use Cases
+## 3. List Available Capture Interfaces
 
-Network Troubleshooting · Intrusion Detection · Threat Hunting · Incident Response · Network Monitoring · Cybersecurity Training · Protocol Analysis · Digital Forensics
+Using TShark:
 
-Skills Demonstrated
-Wireshark
-Network Traffic Analysis
-Packet Analysis
-TCP/IP
-DNS
-HTTP
-ARP
-ICMP
-Network Troubleshooting
-Basic Network Security
-Cybersecurity Monitoring
-Conclusion
+```bash
+tshark -D
+```
 
-This project demonstrated the process of capturing network traffic, applying protocol-specific filters, analyzing TCP, UDP, DNS, HTTP, ARP, and ICMP traffic, and examining network communications from a security perspective.
+## 4. Capture Packets Using TShark
 
-Wireshark provides valuable network visibility for troubleshooting, security monitoring, protocol analysis, and incident investigation.
+```bash
+tshark -i <interface>
+```
 
-⚠️ Disclaimer
+Example:
 
-Only capture and analyze network traffic on systems and networks that you own or have explicit permission to monitor. Unauthorized packet capture or network monitoring may violate laws and organizational policies.
+```bash
+tshark -i eth0
+```
 
-Author
+## 5. Capture a Specific Number of Packets
 
-Sushmitha
+```bash
+tshark -i <interface> -c 50
+```
 
-GitHub: Sushmitha2504
+## 6. Capture Traffic and Save to a File
+
+```bash
+tshark -i <interface> -w capture.pcapng
+```
+
+## 7. Read a Capture File
+
+```bash
+tshark -r capture.pcapng
+```
+
+## 8. Display Only IP Traffic
+
+```bash
+tshark -r capture.pcapng -Y "ip"
+```
+
+## 9. Display TCP Traffic
+
+```bash
+tshark -r capture.pcapng -Y "tcp"
+```
+
+## 10. Display DNS Traffic
+
+```bash
+tshark -r capture.pcapng -Y "dns"
+```
+
+## 11. Display ICMP Traffic
+
+```bash
+tshark -r capture.pcapng -Y "icmp"
+```
+
+> Replace `<interface>` with an interface available on your authorized system, such as `eth0`, `wlan0`, or the appropriate Windows capture interface.
+
+---
+
+# 🔎 Wireshark Display Filters
+
+The following filters were used to analyze different types of network traffic.
+
+### IP Traffic
+
+```text
+ip
+```
+
+### TCP Traffic
+
+```text
+tcp
+```
+
+### UDP Traffic
+
+```text
+udp
+```
+
+### DNS Traffic
+
+```text
+dns
+```
+
+### HTTP Traffic
+
+```text
+http
+```
+
+### ICMP Traffic
+
+```text
+icmp
+```
+
+### ARP Traffic
+
+```text
+arp
+```
+
+### Traffic from a Specific IP
+
+```text
+ip.addr == <IP_ADDRESS>
+```
+
+### Traffic to a Specific IP
+
+```text
+ip.dst == <IP_ADDRESS>
+```
+
+### Traffic from a Specific Source
+
+```text
+ip.src == <IP_ADDRESS>
+```
+
+### Specific TCP Port
+
+```text
+tcp.port == 80
+```
+
+### Specific UDP Port
+
+```text
+udp.port == 53
+```
+
+### TCP SYN Packets
+
+```text
+tcp.flags.syn == 1
+```
+
+### TCP SYN + ACK
+
+```text
+tcp.flags.syn == 1 && tcp.flags.ack == 1
+```
+
+---
+
+# 📊 Packet Analysis
+
+The captured packets were analyzed to understand:
+
+### Source and Destination
+
+* Source IP address
+* Destination IP address
+* Source port
+* Destination port
+
+### Protocol Analysis
+
+The following protocols were examined:
+
+* TCP
+* UDP
+* DNS
+* HTTP
+* ARP
+* ICMP
+
+### TCP Analysis
+
+TCP packets were inspected for:
+
+* SYN
+* SYN-ACK
+* ACK
+* FIN
+* RST
+* Sequence numbers
+* Acknowledgment numbers
+* Retransmissions
+
+### DNS Analysis
+
+DNS traffic was examined to understand:
+
+* DNS queries
+* DNS responses
+* Requested domain information
+* DNS communication patterns
+
+### ICMP Analysis
+
+ICMP traffic was generated and analyzed using tools such as:
+
+```bash
+ping <target-ip>
+```
+
+This helped demonstrate request and response traffic.
+
+---
+
+# 🔐 Security Analysis
+
+Wireshark can provide useful visibility during security investigations.
+
+The captured traffic was analyzed for:
+
+* Unexpected network connections
+* Unusual protocols
+* Repeated connection attempts
+* Unexpected source or destination addresses
+* Plaintext or insecure communication
+* Abnormal packet patterns
+* TCP retransmissions
+* DNS communication patterns
+
+> **Important:** An unusual packet or traffic pattern does not automatically mean that an attack has occurred. Findings should be investigated and correlated with additional evidence.
+
+---
+
+# 🛠️ Network Troubleshooting
+
+Wireshark can also be used to troubleshoot network problems.
+
+The project examined examples such as:
+
+* Packet loss
+* TCP retransmissions
+* Connection failures
+* DNS resolution problems
+* Unexpected network behavior
+* Communication delays
+
+For example, repeated TCP retransmissions can indicate possible connectivity or network-quality problems.
+
+---
+
+# 🖼️ Project Preview
+
+Add your main project images inside the `screenshots/` directory.
+
+### Wireshark Packet Capture
+
+![Wireshark Packet Capture](screenshots/wireshark-packet-capture.png)
+
+### Network Traffic Analysis
+
+![Wireshark Network Traffic Analysis](screenshots/wireshark-network-analysis.png)
+
+### Protocol Analysis
+
+![Wireshark Protocol Analysis](screenshots/wireshark-protocol-analysis.png)
+
+> These images demonstrate packet capture, protocol inspection, and network traffic analysis performed during the project.
+
+---
+
+# 📸 Project Screenshots
+
+The project contains screenshots documenting the practical implementation.
+
+| Figure | Description                     |
+| ------ | ------------------------------- |
+| 1      | Wireshark interface             |
+| 2      | Network interface selection     |
+| 3      | Starting packet capture         |
+| 4      | Captured network packets        |
+| 5      | IP traffic analysis             |
+| 6      | TCP packet analysis             |
+| 7      | UDP traffic analysis            |
+| 8      | DNS traffic analysis            |
+| 9      | HTTP traffic analysis           |
+| 10     | ICMP traffic analysis           |
+| 11     | ARP traffic analysis            |
+| 12     | TCP flags analysis              |
+| 13     | Source and destination analysis |
+| 14     | Packet filtering                |
+| 15     | Network troubleshooting         |
+| 16     | Suspicious traffic analysis     |
+| 17     | Saved packet capture            |
+| 18     | Final analysis                  |
+
+Place the corresponding screenshots in the `screenshots/` directory.
+
+Example:
+
+```text
+screenshots/
+├── figure_01.png
+├── figure_02.png
+├── figure_03.png
+├── figure_04.png
+├── figure_05.png
+├── figure_06.png
+├── figure_07.png
+├── figure_08.png
+├── figure_09.png
+├── figure_10.png
+├── figure_11.png
+├── figure_12.png
+├── figure_13.png
+├── figure_14.png
+├── figure_15.png
+├── figure_16.png
+├── figure_17.png
+└── figure_18.png
+```
+
+---
+
+# 💾 Packet Capture File
+
+The packet capture generated during the project can be stored as:
+
+```text
+capture.pcapng
+```
+
+The capture file can be opened using Wireshark for further analysis.
+
+Avoid uploading captures containing sensitive or private network information.
+
+---
+
+# 📈 Project Outcomes
+
+Through this project, the following outcomes were achieved:
+
+* Successfully captured live network traffic
+* Identified network protocols
+* Analyzed TCP and UDP communication
+* Investigated DNS queries and responses
+* Analyzed ARP and ICMP packets
+* Used Wireshark display filters
+* Inspected TCP flags and packet details
+* Identified network communication patterns
+* Practiced basic security monitoring
+* Used packet analysis for troubleshooting
+
+---
+
+# 🎓 Skills Demonstrated
+
+* Wireshark
+* Network Traffic Analysis
+* Packet Capture
+* Network Protocol Analysis
+* TCP/IP
+* TCP and UDP
+* DNS Analysis
+* HTTP Analysis
+* ARP Analysis
+* ICMP Analysis
+* Network Troubleshooting
+* Security Monitoring
+* Basic Incident Analysis
+* Linux Command Line
+* TShark
+* Cybersecurity Fundamentals
+* Technical Documentation
+
+---
+
+# 📚 Learning Outcomes
+
+This project helped develop practical understanding of:
+
+* How network packets are transmitted
+* How TCP/IP communication works
+* How to capture network traffic
+* How to analyze network protocols
+* How to use Wireshark filters
+* How to identify source and destination systems
+* How to inspect TCP communication
+* How to analyze DNS traffic
+* How packet analysis can support security investigations
+* How network analysis can assist troubleshooting
+
+---
+
+# 🌐 Applications / Use Cases
+
+Wireshark can be used for:
+
+* Network Security Monitoring
+* Network Troubleshooting
+* Incident Response
+* Packet Analysis
+* Protocol Analysis
+* Network Performance Analysis
+* Security Investigations
+* Digital Forensics
+* Cybersecurity Training
+* Network Administration
+
+---
+
+# 🚀 Future Improvements
+
+Possible future improvements include:
+
+* Automated packet analysis using Python
+* Build a network traffic dashboard
+* Detect suspicious traffic automatically
+* Integrate threat-intelligence feeds
+* Add protocol-based traffic classification
+* Create automated packet-analysis reports
+* Develop anomaly detection using machine learning
+* Integrate Wireshark/TShark with security monitoring tools
+
+---
+
+# ✅ Conclusion
+
+This project demonstrated practical **network packet capture and traffic analysis using Wireshark**.
+
+The project covered packet capture, protocol analysis, TCP/UDP communication, DNS, HTTP, ARP, ICMP, filtering, security monitoring, and network troubleshooting.
+
+It provides a practical foundation for understanding **network security monitoring, packet analysis, troubleshooting, and cybersecurity investigation techniques**.
+
+---
+
+# ⚠️ Disclaimer
+
+This project is intended **only for authorized cybersecurity testing, network analysis, and educational purposes**.
+
+Only capture or analyze network traffic that you own or have explicit permission to monitor. Unauthorized packet capture or network monitoring may violate laws, privacy requirements, and organizational policies.
+
+---
+
+# 👩‍💻 Author
+
+**Sushmitha**
+
+GitHub: [Sushmitha2504](https://github.com/Sushmitha2504)
